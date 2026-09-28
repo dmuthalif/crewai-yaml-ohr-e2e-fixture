@@ -1,0 +1,25 @@
+[project]
+name = "e2e_yaml"
+version = "0.1.0"
+description = "e2e_yaml using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=1.15.11,<2.0.0"
+]
+
+[project.scripts]
+e2e_yaml = "e2e_yaml.main:run"
+run_crew = "e2e_yaml.main:run"
+train = "e2e_yaml.main:train"
+replay = "e2e_yaml.main:replay"
+test = "e2e_yaml.main:test"
+run_with_trigger = "e2e_yaml.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
+project_id = "ca31e1a2-4951-4d23-bdca-0ccb2c13b7dd"
